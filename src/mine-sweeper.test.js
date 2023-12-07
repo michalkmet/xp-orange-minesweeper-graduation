@@ -29,3 +29,11 @@ describe('User story 4: Mark the bombs around', () => {
     expect(mineSweeper(pick, operation)).toBe('+-+-+-+\n| | | |\n+-+-+-+\n|*|*| |\n+-+-+-+\n|3|*| |\n+-+-+-+\n[Sandbox 3x3] Square flagged as bomb.');
   });
 });
+
+describe('User story 5: Game Victory after all squares cleared', () => {
+  let pick = [false, true, true, false, false, true, true, false, true];
+  let operation = 'pick';
+  it('UAT5.1: When player clears the all the squares [2;0 + 0;1 + 0;2 + 1;2 + 2;2], then I should see "+-+-+-+\n|2|2|1|\n+-+-+-+\n|*|*|2|\n+-+-+-+\n|3|*|2|\n+-+-+-+\n[Sandbox 3x3] the land is cleared! GOOD JOB!"', () => {
+    expect(mineSweeper(pick, operation)).toBe('+-+-+-+\n|2|2|1|\n+-+-+-+\n|*|*|2|\n+-+-+-+\n|3|*|2|\n+-+-+-+\n[Sandbox 3x3] the land is cleared! GOOD JOB!');
+  });
+});

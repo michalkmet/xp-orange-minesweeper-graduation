@@ -23,8 +23,10 @@ function createPickMessage(pick) {
   let message = '';
   if (pick[4] === true) {
     message = 'BOOM! – Game Over.';
-  } else if (pick[6] === true) {
+  } else if (pick[6] === true && pick[8] === false) {
     message = '3 bombs around your square.';
+  } else {
+    message = 'the land is cleared! GOOD JOB!';
   }
   return message;
 }
@@ -52,8 +54,10 @@ function createPickBoard(pick) {
   let board = '';
   if (pick[4] === true) {
     board = '+-+-+-+\n| | | |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+\n';
-  } else if (pick[6] === true) {
+  } else if (pick[6] === true && pick[8] === false) {
     board = '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n|3| | |\n+-+-+-+\n';
+  } else {
+    board = '+-+-+-+\n|2|2|1|\n+-+-+-+\n|*|*|2|\n+-+-+-+\n|3|*|2|\n+-+-+-+\n';
   }
   return board;
 }

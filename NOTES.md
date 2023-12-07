@@ -40,4 +40,11 @@ As a user, I want to see when player marks the squares as a bombs
 
 - ✅ DONE UAT4.1: When player marks the 3 squares as bombs [1;0 + 1;1 + 2;1]:, then I should see '+-+-+-+\n| | | |\n+-+-+-+\n|_|_| |\n+-+-+-+\n|3|\*| |\n+-+-+-+\n[Sandbox 3x3] Square flagged as bomb.'
 
-- 🚧 IN PROGRESS Refactor production code
+- ✅ DONE Refactor production code
+
+Pomodoro 4:
+
+User story 5: Game Victory after all squares cleared
+As a user, I want to see when game ends with a victory (all squares cleared)
+
+- ✅ DONE UAT5.1: When player clears the all the squares [2;0 + 0;1 + 0;2 + 1;2 + 2;2], then I should see '+-+-+-+\n|2|2|1|\n+-+-+-+\n|_|_|2|\n+-+-+-+\n|3|\*|2|\n+-+-+-+\n[Sandbox 3x3] the land is cleared! GOOD JOB!'

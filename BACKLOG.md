@@ -73,7 +73,7 @@ As a user, I want to see when game ends with a victory (all squares cleared)
 - ⚠ TODO UAT5.1: When player clears the all the squares [2;0 + 0;1 + 0;2 + 1;2 + 2;2], then I should see '+-+-+-+
   |2|2|1|
   +-+-+-+
-  |_|_|2|
+  |*|*|2|
   +-+-+-+
   |3|*|2|
   +-+-+-+
