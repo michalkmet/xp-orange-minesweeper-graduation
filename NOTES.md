@@ -36,4 +36,4 @@ As a user, I want to see when player clear the square and number of bombs around
 User story 4: Mark the bombs around
 As a user, I want to see when player marks the squares as a bombs
 
-- 🚧 IN PROGRESS UAT4.1: When player marks the 3 squares as bombs [1;0 + 1;1 + 2;1]:, then I should see '+-+-+-+\n| | | |\n+-+-+-+\n|_|_| |\n+-+-+-+\n|3|\*| |\n+-+-+-+\n[Sandbox 3x3] Square flagged as bomb.'
+- ✅ DONE UAT4.1: When player marks the 3 squares as bombs [1;0 + 1;1 + 2;1]:, then I should see '+-+-+-+\n| | | |\n+-+-+-+\n|_|_| |\n+-+-+-+\n|3|\*| |\n+-+-+-+\n[Sandbox 3x3] Square flagged as bomb.'
