@@ -1,8 +1,7 @@
 function mineSweeper(pick, operation = null) {
-  console.log('pick: ', pick);
-  console.log('operation: ', operation);
   let message = createMessage(pick, operation);
   let board = createBoard(pick, operation);
+  console.log(board + message);
   return board + message;
 }
 

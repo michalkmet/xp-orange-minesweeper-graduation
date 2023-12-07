@@ -55,3 +55,5 @@ As a user, I want to see when game ends with a victory (all squares cleared)
 - ⚠ TODO Reduce complexity of all functions
 
 time over
+
+- ⚠ TODO refactor + console logs
