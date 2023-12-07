@@ -69,7 +69,7 @@ Example 4 - Mark the bombs around – What I expect after I marked the 3 squares
 [Sandbox 3x3] Square flagged as bomb.
 ```
 
-Example 5 - After I cleared the all the squares [2;0 + 0;1 + 0;2 + 1;2 + 2;2]
+Example 5 - Game Victory – After I cleared the all the squares [2;0 + 0;1 + 0;2 + 1;2 + 2;2]
 
 ```
 +-+-+-+
