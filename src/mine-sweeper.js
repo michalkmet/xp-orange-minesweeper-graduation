@@ -8,30 +8,60 @@ function mineSweeper(pick, operation = null) {
 
 function createMessage(pick, operation = null) {
   let message = '[Sandbox 3x3] ';
-  if (pick[4] === true && operation === 'pick') {
-    message += 'BOOM! – Game Over.';
-  } else if (pick[6] === true && operation === 'pick') {
-    message += '3 bombs around your square.';
+
+  if (operation === 'pick') {
+    message += createPickMessage(pick);
   } else if (operation === 'flag') {
-    message += 'Square flagged as bomb.';
+    message += createFlagMessage(pick);
   } else {
     message += 'Game created';
   }
   return message;
 }
 
+function createPickMessage(pick) {
+  let message = '';
+  if (pick[4] === true) {
+    message = 'BOOM! – Game Over.';
+  } else if (pick[6] === true) {
+    message = '3 bombs around your square.';
+  }
+  return message;
+}
+
+function createFlagMessage(pick) {
+  if (pick) {
+    return 'Square flagged as bomb.';
+  }
+}
+
 function createBoard(pick, operation = null) {
   let board = '';
-  if (pick[4] === true && operation === 'pick') {
-    board = '+-+-+-+\n| | | |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+\n';
-  } else if (pick[6] === true && operation === 'pick') {
-    board = '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n|3| | |\n+-+-+-+\n';
+
+  if (operation === 'pick') {
+    board += createPickBoard(pick);
   } else if (operation === 'flag') {
-    board = '+-+-+-+\n| | | |\n+-+-+-+\n|*|*| |\n+-+-+-+\n|3|*| |\n+-+-+-+\n';
+    board += createFlagBoard(pick);
   } else {
-    board = '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n';
+    board += '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n';
   }
   return board;
+}
+
+function createPickBoard(pick) {
+  let board = '';
+  if (pick[4] === true) {
+    board = '+-+-+-+\n| | | |\n+-+-+-+\n| |X| |\n+-+-+-+\n| | | |\n+-+-+-+\n';
+  } else if (pick[6] === true) {
+    board = '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n|3| | |\n+-+-+-+\n';
+  }
+  return board;
+}
+
+function createFlagBoard(pick) {
+  if (pick) {
+    return '+-+-+-+\n| | | |\n+-+-+-+\n|*|*| |\n+-+-+-+\n|3|*| |\n+-+-+-+\n';
+  }
 }
 
 module.exports = mineSweeper;
