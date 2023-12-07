@@ -19,3 +19,11 @@ describe('User story 3: Clean square', () => {
     expect(mineSweeper(pick)).toBe('+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n|3| | |\n+-+-+-+\n[Sandbox 3x3] 3 bombs around your square.');
   });
 });
+
+describe('User story 4: Mark the bombs around', () => {
+  let pick = [false, false, false, true, true, false, false, true, false];
+  let operation = 'flag';
+  it('UAT4.1: When player marks the 3 squares as bombs [1;0 + 1;1 + 2;1], then I should see "+-+-+-+\n| | | |\n+-+-+-+\n|*|*| |\n+-+-+-+\n|3|*| |\n+-+-+-+\n[Sandbox 3x3] Square flagged as bomb."', () => {
+    expect(mineSweeper(pick, operation)).toBe('+-+-+-+\n| | | |\n+-+-+-+\n|*|*| |\n+-+-+-+\n|3|*| |\n+-+-+-+\n[Sandbox 3x3] Square flagged as bomb.');
+  });
+});
