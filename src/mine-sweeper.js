@@ -23,10 +23,10 @@ function createPickMessage(pick) {
   let message = '';
   if (pick[4] === true) {
     message = 'BOOM! – Game Over.';
-  } else if (pick[6] === true && pick[8] === false) {
-    message = '3 bombs around your square.';
-  } else {
+  } else if (pick[8] === true) {
     message = 'the land is cleared! GOOD JOB!';
+  } else if (pick[6] === true) {
+    message = '3 bombs around your square.';
   }
   return message;
 }
