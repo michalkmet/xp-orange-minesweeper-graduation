@@ -16,5 +16,9 @@ Pomodoro 1:
 
 Pomodoro 2:
 
-- ⚠ TODO Refactor backlog
-- ⚠ TODO Uats
+- ✅ DONE Refactor backlog
+
+User Story 1: Game created
+As a user, I want to see empty board and game created message
+
+- ✅ DONE UAT1.1: When game start, then I should see '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n[Sandbox 3x3] Game created'
